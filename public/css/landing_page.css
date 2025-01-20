@@ -1,0 +1,61 @@
+/* #0a58ca - #7e99a3
+#93acfc -
+*/
+header {
+    background-image: linear-gradient(180deg, #c4b6fd, #93acfc);
+}
+/* tulisan e recruitment dan "ini" */
+.navbar-brand,
+.text-primary {
+    color: #5b6fb4 !important;
+}
+
+.nav-link {
+    font-weight: 500;
+}
+
+.btn-primary {
+    background-color: #0a58ca !important;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #257dfd !important;
+}
+
+.nav-link:hover {
+    color: #0a58ca;
+}
+
+p {
+    font-size: 18px;
+}
+
+.blue-bg {
+    background-color: #0a58ca;
+    color: fff;
+}
+
+.text-primary {
+    color: #257dfd;
+}
+
+.icons {
+    height: 32px;
+    width: 32px;
+    margin-bottom: 16px;
+    color: #0a58ca;
+    background-color: #f2f2f2;
+    padding: 6px;
+}
+
+.nav-tabs .nav-item.show .nav-link,
+.nav-tabs .nav-link.active {
+    border: none !important;
+    background-color: #0a58ca;
+    color: white;
+}
+
+.nav-tabs {
+    border: none !important;
+}
