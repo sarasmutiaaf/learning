@@ -7,7 +7,8 @@ body {
     align-items: center;
     min-height: 100vh;
     font-family: sans-serif;
-    background: linear-gradient(to bottom, #324461, #979da7, #5a6980);
+    background-color: #fff;
+    /* background: linear-gradient(to bottom, #324461, #979da7, #5a6980); */
 }
 
 .main {

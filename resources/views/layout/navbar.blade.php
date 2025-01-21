@@ -13,17 +13,19 @@
         margin: 20px;
         border-radius: 16px;
         padding: 0.5rem;
+        box-shadow: 0 4px 8px rgb(149, 164, 180);
+        /* Menambahkan bayangan */
     }
 
     .navbar-brand {
         font-weight: 500;
-        color: rgb(193, 103, 199);
+        color: rgb(103, 148, 199);
         font-size: 24px;
         transition: 0.3s color;
     }
 
     .login-button {
-        background-color: rgb(193, 103, 199);
+        background-color: rgb(103, 148, 199);
         color: #fff;
         font-size: 14px;
         padding: 8px 20px;
@@ -33,7 +35,7 @@
     }
 
     .login-button:hover {
-        background-color: #ba7499;
+        background-color: rgb(60, 85, 114);
     }
 
     .navbar-toggler {
@@ -67,7 +69,7 @@
             transform: translateX(-50%);
             width: 0;
             height: 2px;
-            background-color: #ba7499;
+            background-color: rgb(103, 148, 199);
             visibility: hidden;
             transition: 0.3s ease-in-out;
         }
@@ -81,14 +83,14 @@
 
     .hero-section {
         /* background: url("/img/backg.jpg") no-repeat center; */
-        background-color: #ba7499;
+        /* background-color: #ba7499; */
         background-size: cover;
         width: 100%;
-        height: 100vh;
+        /* height: 100vh; */
     }
 
     .hero-section::before {
-        background-color: rgba(0, 0, 0, 0.6);
+        /* background-color: rgba(0, 0, 0, 0.6); */
         content: "";
         position: absolute;
         top: 0;
@@ -98,7 +100,7 @@
     }
 
     .hero-section .container {
-        height: 100vh;
+        /* height: 100vh; */
         z-index: 1;
         position: relative;
     }
@@ -126,17 +128,16 @@
                 <div class="offcanvas-body">
                     <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
                         <li class="nav-item">
-                            <a class="nav-link mx-lg-2 active" aria-current="page"
-                                href="{{ asset('./dashboard') }}">Beranda</a>
+                            <a class="nav-link mx-lg-2 active" aria-current="page" href="{{ asset('./') }}">Beranda</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link mx-lg-2" href="#">Belajar</a>
+                            <a class="nav-link mx-lg-2" href="{{ asset('./belajar') }}">Belajar</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link mx-lg-2" href="#">Materi</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link mx-lg-2" href="#">Lowongan Kerja</a>
+                            <a class="nav-link mx-lg-2" href="#">Diskusi</a>
                         </li>
                         <!-- <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
@@ -159,12 +160,12 @@
                     </form> -->
                 </div>
             </div>
-            <a href="#" class="login-button">Daftar</a>
+            <a href="{{ asset('./login') }}" class="login-button">Daftar</a>
             <button class="navbar-toggler pe-0" type="button" data-bs-toggle="offcanvas"
                 data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <a href="#" class="login-button ms-2">Masuk</a>
+            <a href="{{ asset('./login') }}" class="login-button ms-2">Masuk</a>
             <button class="navbar-toggler pe-0" type="button" data-bs-toggle="offcanvas"
                 data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -174,6 +175,7 @@
     <!--end navbar -->
     <section class="hero-section">
         <div class="container d-flex align-items-center justify-content-center fs-1 text-white flex-column">
+            @yield('content')
             <!-- <h1>saras mutia arofah</h1> -->
         </div>
     </section>
