@@ -26,8 +26,5 @@
         "CACHE_DRIVER": "array",
         "LOG_CHANNEL": "stderr",
         "SESSION_DRIVER": "cookie"
-    },
-    "scripts": {
-        "build": "apt-get update && apt-get install -y openssl && vercel build"
     }
 }
