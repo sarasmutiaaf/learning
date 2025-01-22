@@ -2,7 +2,7 @@
     "version": 2,
     "framework": null,
     "functions": {
-        "api/index.php": { "runtime": "vercel-php@0.6.0" }
+        "api/index.php": { "runtime": "vercel-php@0.7.2" }
     },
     "routes": [
         {
@@ -13,7 +13,7 @@
     "env": {
         "APP_ENV": "production",
         "APP_DEBUG": "true",
-        "APP_URL": "https://learning.vercel.app",
+        "APP_URL": "https://learningweb.vercel.app",
         "APP_KEY": "",
 
         "APP_CONFIG_CACHE": "/tmp/config.php",
@@ -26,5 +26,8 @@
         "CACHE_DRIVER": "array",
         "LOG_CHANNEL": "stderr",
         "SESSION_DRIVER": "cookie"
+    },
+    "scripts": {
+        "build": "apt-get update && apt-get install -y openssl && vercel build"
     }
 }
