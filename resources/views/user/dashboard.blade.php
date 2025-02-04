@@ -44,8 +44,7 @@
                         programmer hebat pernah menjadi pemula. Kuncinya adalah konsistensi, semangat, dan kemauan untuk
                         terus belajar dari setiap tantangan yang dihadapi.
                     </p>
-
-                    <button type="button" class="btn btn-primary">Saya mau belajar</button>
+                    <a href="{{ asset('./belajar') }}" class="btn btn-outline-primary">Saya mau belajar</a>
                 </div>
             </div>
         </div>
@@ -54,7 +53,7 @@
         <div class="container pt-5">
             <div class="row align-items-center justify-content-center">
                 <div class="col-12 col-lg-6">
-                    <h2 class="text-primary fs-1 fw-bold mb-3">Baca Artikel</h2>
+                    <h2 class="text-primary fs-1 fw-bold mb-3">Baca Materi</h2>
                     <p>Setiap kata yang kamu baca adalah jendela baru menuju wawasan yang lebih
                         luas dan pemahaman yang lebih dalam. Membaca bukan sekadar mengisi waktu luang, tetapi sebuah
                         investasi berharga untuk masa depanmu. Dengan membaca, kamu bisa memperkaya pengetahuan,
@@ -62,7 +61,7 @@
                         untuk terus belajar dan berkembang, karena setiap informasi yang kamu serap hari ini bisa
                         menjadi langkah kecil menuju perubahan besar dalam hidupmu. Mari mulai membaca dan temukan
                         hal-hal baru yang menakjubkan!</p>
-                    <button type="button" class="btn btn-primary">Saya mau baca artikel</button>
+                    <a href="{{ asset('./materi') }}" class="btn btn-outline-primary">Saya mau baca materi</a>
                 </div>
                 <div class="col-12 col-lg-6">
                     <img src="{{ asset('img/iconlandingpage.jpg') }}" alt="tech gear vr headset" class="img-fluid">
@@ -87,8 +86,7 @@
                         untuk setiap tantangan yang kita hadapi. Jadi, mari kita mulai diskusi dan wujudkan perubahan
                         dari percakapan yang bermakna!
                     </p>
-
-                    <button type="button" class="btn btn-primary">Saya mau diskusi</button>
+                    <a href="{{ asset('./diskusi') }}" class="btn btn-outline-primary">Saya mau diskusi</a>
                 </div>
             </div>
         </div>

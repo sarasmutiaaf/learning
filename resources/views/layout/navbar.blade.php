@@ -134,10 +134,10 @@
                             <a class="nav-link mx-lg-2" href="{{ asset('./belajar') }}">Belajar</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link mx-lg-2" href="#">Materi</a>
+                            <a class="nav-link mx-lg-2" href="{{ asset('./materi') }}">Materi</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link mx-lg-2" href="#">Diskusi</a>
+                            <a class="nav-link mx-lg-2" href="{{ asset('./diskusi') }}">Diskusi</a>
                         </li>
                         <!-- <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
