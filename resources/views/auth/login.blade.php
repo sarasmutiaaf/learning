@@ -4,7 +4,7 @@
 <html lang="en">
 
 <head>
-    <title>E-Recruitment | Login</title>
+    <title>E-Learning | Login</title>
     <link rel="stylesheet" href="{{ asset('css/login.css') }}">
 
 </head>

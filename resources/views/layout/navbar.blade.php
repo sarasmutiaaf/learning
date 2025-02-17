@@ -131,13 +131,16 @@
                             <a class="nav-link mx-lg-2 active" aria-current="page" href="{{ asset('./') }}">Beranda</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link mx-lg-2" href="{{ asset('./belajar') }}">Belajar</a>
+                            <a class="nav-link mx-lg-2 {{ Request::is('belajar') ? 'active text-primary fw-bold' : '' }}"
+                                href="{{ asset('./belajar') }}">Belajar</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link mx-lg-2" href="{{ asset('./materi') }}">Materi</a>
+                            <a class="nav-link mx-lg-2 {{ Request::is('materi') ? 'active text-primary fw-bold' : '' }}"
+                                href="{{ asset('./materi') }}">Materi</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link mx-lg-2" href="{{ asset('./diskusi') }}">Diskusi</a>
+                            <a class="nav-link mx-lg-2 {{ Request::is('diskusi') ? 'active text-primary fw-bold' : '' }}"
+                                href="{{ asset('./diskusi') }}">Diskusi</a>
                         </li>
                         <!-- <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"

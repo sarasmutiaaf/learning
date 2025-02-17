@@ -8,6 +8,12 @@
     <link rel="stylesheet" href="{{ asset('css/belajar.css') }}">
 </head>
 
+<style>
+p {
+    text-align: justify;
+}
+</style>
+
 <body>
     @extends('layout.navbar')
     <section style="margin-top: 100px;">
@@ -18,11 +24,6 @@
                     <h3 class="fs-6 mb-3 text-center">Baca materi di E-Learning</h3>
                 </div>
                 <hr style="border: 1px solid #000; width: 100%; margin: 20px auto;">
-                <form class="form-inline d-flex">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button type="submit" class="btn btn-outline-primary">Search</button>
-                </form>
-                <hr style="border: 1px solid #000; width: 100%; margin: 15px auto;">
             </div>
     </section>
     <section>

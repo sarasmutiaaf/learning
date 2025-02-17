@@ -7,6 +7,12 @@
     <title>E-Learning</title>
 </head>
 
+<style>
+p {
+    text-align: justify;
+}
+</style>
+
 <body>
     @extends('layout.navbar')
     <section style="margin-top: 50px;">

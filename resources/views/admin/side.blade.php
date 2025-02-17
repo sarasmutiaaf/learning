@@ -4,19 +4,20 @@
 <html lang="en">
 
 <head>
-    <title>E-Recruitment | Sidebar</title>
+    <title>E-Learning | Sidebar</title>
     <link rel="stylesheet" href="{{ asset('css/side.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 
 <body>
+
     <div class="wrapper">
         <!-- sidebar -->
         <aside id="sidebar">
             <div class="h-100">
                 <div class="sidebar-logo">
-                    <img src="{{ asset('img/downloadkuc.jpeg') }}" class="" width="30" height="24">
-                    <a href="#">E-Recruitment</a>
+                    <img src="{{ asset('img/learning.png') }}" class="" width="30" height="24">
+                    <a href="#">E-Learning</a>
                 </div>
                 <!-- sidebar navigasi -->
                 <ul class="sidebar-nav">
@@ -24,45 +25,33 @@
                         Dashboard
                     </li>
                     <li class="sidebar-item">
-                        <a href="#" class="sidebar-link nav-link">
+                        <a href="{{ asset('./admin') }}" class="sidebar-link nav-link">
                             <i class="fas fa-home fe-2"></i>
                             Home
                         </a>
                     </li>
                     <li class="sidebar-item">
-                        <a href="#" class="sidebar-link nav-link">
-                            <i class="fas fa-user-shield fe-2"></i>
-                            Data Pribadi
+                        <a href="{{ asset('./belajar_admin') }}" class="sidebar-link nav-link">
+                            <i class="fas fa-book fe-2"></i>
+                            Belajar
                         </a>
                     </li>
                     <li class="sidebar-item">
-                        <a href="#" class="sidebar-link nav-link">
-                            <i class="fas fa-university fe-2"></i>
-                            Pendidikan
+                        <a href="{{ asset('./materi_admin') }}" class="sidebar-link nav-link">
+                            <i class="fas fa-scroll fe-2"></i>
+                            Materi
                         </a>
                     </li>
-                    <li class="sidebar-item">
+                    <!-- <li class="sidebar-item">
                         <a href="#" class="sidebar-link nav-link">
-                            <i class="fas fa-hand-holding-heart fe-2"></i>
-                            Pengalaman
+                            <i class="fas fa-users fe-2"></i>
+                            Diskusi
                         </a>
-                    </li>
+                    </li> -->
                     <li class="sidebar-item">
-                        <a href="#" class="sidebar-link nav-link">
-                            <i class="fas fa-thumbs-up fe-2"></i>
-                            Keahlian
-                        </a>
-                    </li>
-                    <li class="sidebar-item">
-                        <a href="#" class="sidebar-link nav-link">
-                            <i class="fas fa-search fe-2"></i>
-                            Cari Lowongan Kerja
-                        </a>
-                    </li>
-                    <li class="sidebar-item">
-                        <a href="#" class="sidebar-link nav-link">
-                            <i class="fas fa-envelope-open fe-2"></i>
-                            Lowongan Anda
+                        <a href="{{ asset('./user_admin') }}" class="sidebar-link nav-link">
+                            <i class="fas fa-user fe-2"></i>
+                            User
                         </a>
                     </li>
                     <li class="sidebar-item">
@@ -96,11 +85,19 @@
                 </div>
             </nav>
             <main class="content px-3 py-3">
+                @yield('content')
+
             </main>
 
         </div>
     </div>
-
+    <!--end navbar -->
+    <section class="hero-section">
+        <div class="container d-flex align-items-center justify-content-center fs-1 flex-column">
+            <!-- @yield('content') -->
+            <!-- <h1>saras mutia arofah</h1> -->
+        </div>
+    </section>
 
 </body>
 

@@ -4,9 +4,14 @@
 <html lang="en">
 
 <head>
-    <title>E-Learning | Belajar</title>
-    <link rel="stylesheet" href="{{ asset('css/belajar.css') }}">
+    <title>E-Learning</title>
+    <!-- <link rel="stylesheet" href="{{ asset('css/belajar.css') }}"> -->
 </head>
+<style>
+p {
+    text-align: justify;
+}
+</style>
 
 <body>
     @extends('layout.navbar')

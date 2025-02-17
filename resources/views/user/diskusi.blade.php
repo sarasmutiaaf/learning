@@ -15,14 +15,9 @@
             <div class="row align-items-center justify-content-center">
                 <div class="col-12 col-lg-6">
                     <h1 class="text-primary fs-* fw-bold mb-3 text-center">Tempat Diskusi di E-Learning</h1>
-                    <h3 class="fs-6 mb-3 text-center">Diskusi Bersama di E-Learning</h3>
+                    <h3 class="fs-6 mb-3 text-center">Diskusi bersama di E-Learning</h3>
                 </div>
                 <hr style="border: 1px solid #000; width: 100%; margin: 20px auto;">
-                <form class="form-inline d-flex">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button type="submit" class="btn btn-outline-primary">Search</button>
-                </form>
-                <hr style="border: 1px solid #000; width: 100%; margin: 15px auto;">
             </div>
     </section>
     <section>

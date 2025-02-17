@@ -23,12 +23,17 @@
     <section>
         <div class="d-flex" style="gap: 20px; margin-left: 130px;">
             <div class="card" style="width: 22rem;">
-                <!-- <img class="card-img-top" src="{{ asset('img/html.png') }}" alt="Card image cap"
-                    style="aspect-ratio: 4 / 2.7; object-fit: cover;"> -->
                 <div class="card-body">
-                    <h4 class="card-title fw-bold">Berkenalan Dengan HTML</h4>
-
-                    <a href="#" class="btn btn-outline-primary w-100">Sudah Selesai</a>
+                    <h5 lass="card-title fw-bold">Berkenalan dengan HTML</h5>
+                </div>
+                <img class="card-img-top" src="{{ asset('img/pers.png') }}" alt="Card image cap"
+                    style="aspect-ratio: 4 / 2.7; object-fit: cover;">
+                <div class="card-body">
+                    <h4 class="card-title fw-bold">
+                        <hr style="border: 1px solid #000; width: 100%; margin: 20px auto;">
+                    </h4>
+                    <a href="{{ asset('./belajar_detail') }}" class="btn btn-outline-primary w-100">Mulai
+                        Belajar</a>
                 </div>
             </div>
         </div>

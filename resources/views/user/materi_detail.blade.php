@@ -8,15 +8,17 @@
     <link rel="stylesheet" href="{{ asset('css/belajar.css') }}">
 </head>
 
+<style>
+p {
+    text-align: justify;
+}
+</style>
+
 <body>
     @extends('layout.navbar')
     <section style="margin-top: 100px;">
         <div class="container pt-5">
             <div class="row align-items-center justify-content-center">
-                <div class="col-12 col-lg-6">
-                    <h1 class="text-primary fs-* fw-bold mb-3 text-center">3 Tips Membuat Website yang Menarik</h1>
-                </div>
-                <hr style="border: 1px solid #000; width: 100%; margin: 20px auto; margin-bottom: 40px;">
             </div>
     </section>
     <section>
@@ -27,7 +29,7 @@
                     <hr style="border: 1px solid #000; width: 100%; margin: 20px auto;">
                     <p class="card-text">Sebuah website yang baik adalah website yang dapat menarik minat pengunjung dan
                         menghasilkan banyak trafik. Berikut adalah beberapa tips yang dapat digunakan untuk membuat
-                        website yang lebih bermanfaat , responsif, dan memberikan pengalaman terbaik bagi pengunjung.
+                        website yang lebih bermanfaat, responsif, dan memberikan pengalaman terbaik bagi pengunjung.
                     </p>
                     <p>1. Gunakan Font yang Mudah Dibaca</p>
                     <p>Meskipun gaya yang rumit bisa menjadi lebih menarik, menggunakan font yang lebih dikenal dan
