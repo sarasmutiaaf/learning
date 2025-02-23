@@ -27,20 +27,21 @@ p {
             </div>
     </section>
     <section>
-        <div class="d-flex" style="gap: 20px; margin-left: 130px;">
-            <div class="card" style="width: 22rem;">
-                <img class="card-img-top" src="{{ asset('img/laptop2.jpg') }}" alt="Card image cap"
+        <div class="d-flex flex-wrap justify-content-center" style="gap: 20px; margin-left: auto; margin-right: auto;">
+            @foreach($materi as $item)
+            <div class="card" style="width: calc(27.3% - 20px); min-width: 250px;">
+                <img class="card-img-top" src="{{ Storage::url($item->gambar) }}" alt="Card image cap"
                     style="aspect-ratio: 4 / 2.7; object-fit: cover;">
-                <div class="card-body">
-                    <h4 class="card-title fw-bold">Tips Membuat Website Yang Menarik</h4>
-                    <p class="card-text">Sebuah website yang baik adalah website yang dapat menarik minat pengunjung dan
-                        menghasilkan banyak trafik. Berikut adalah beberapa tips yang dapat digunakan untuk membuat
-                        website yang lebih bermanfaat , responsif, dan memberikan pengalaman terbaik bagi pengunjung.
-                    </p>
+                <div class="card-body d-flex flex-column">
+                    <h4 class="card-title fw-bold">{{ $item->judul }}</h4>
+                    <p class="card-text flex-grow-1">{{ $item->deskripsi }}</p>
                     <hr style="border: 1px solid #000; width: 100%; margin: 15px auto;">
-                    <a href="{{ asset('./materi_detail') }}" class="btn btn-outline-primary w-100">Selengkapnya</a>
+                    <a href="{{ route('materi_detail', $item->id) }}" class="btn btn-outline-primary mt-auto w-100">
+                        Selengkapnya
+                    </a>
                 </div>
             </div>
+            @endforeach
         </div>
 
     </section>

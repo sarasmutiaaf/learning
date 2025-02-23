@@ -36,8 +36,7 @@ td:hover {
     <div class="container" id="buku">
         <div class=" row">
             <div class="col ">
-
-                <a href="/buku/create" class="btn btn-outline-primary mt-3">Tambah Data Materi</a>
+                <a href="{{ route('materi/create') }}" class="btn btn-outline-primary mt-3">Tambah Data Materi</a>
                 <h1 class="mt-2" style="color: #6282a3">Daftar Materi</h1>
             </div>
 
@@ -52,27 +51,25 @@ td:hover {
                     </tr>
                 </thead>
                 <tbody>
-
+                    @foreach($tbl_materi as $materi)
                     <tr class="">
-                        <th scope="row">1</th>
-                        <td><img src="{{ asset('img/laptop2.jpg') }}" alt="" class="cover"></td>
-                        <td>Tips membuat website yang menarik</td>
-                        <td>Sebuah website yang baik adalah website yang dapat menarik minat pengunjung dan
-                            menghasilkan banyak trafik. Berikut adalah beberapa tips yang dapat digunakan untuk membuat
-                            website yang lebih bermanfaat , responsif, dan memberikan pengalaman terbaik bagi
-                            pengunjung.
-                        </td>
+                        <th scope="row">{{ $loop->iteration }}</th>
+                        <td><img src="{{ Storage::url($materi->gambar) }}" alt="" class="cover"></td>
+                        <td>{{ $materi->judul }}</td>
+                        <td>{{ $materi->deskripsi }}</td>
                         <td>
-                            <a href="#" class="btn btn-outline-warning">Edit</a>
-                            <form action="#" method="post" class="d-inline">
+                            <a href="{{ route('materi/edit', $materi->id) }}" class="btn btn-outline-warning">Edit</a>
+                            <form action="{{ route ('materi/destroy', $materi->id) }}" method="post" class="d-inline">
                                 <input type="hidden" name="buku" value="">
                                 <input type="hidden" name="_method" value="DELETE">
+                                @csrf
+                                @method('DELETE')
                                 <button type="submit" class="btn btn-outline-danger"
                                     onclick="return confirm('apakah anda yakin?');">Delete</button>
                             </form>
-                            <!-- <a href="/admin" class="btn btn-outline-danger">Delete</a> -->
                         </td>
                     </tr>
+                    @endforeach
                 </tbody>
             </table>
         </div>
