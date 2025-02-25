@@ -14,12 +14,16 @@ Route::get('/admin', function () {
 
 Route::get('/', function () {
     return view('user/dashboard');
-});
+})->name('dashboard');
 
 use App\Http\Controllers\AuthController;
 
-Route::get('/login', [AuthController::class, 'login'])->name('login');
+Route::get('/login', [AuthController::class, 'index'])->name('login');
 
+Route::post('/register', [AuthController::class, 'register']);
+Route::post('/login', [AuthController::class, 'login']);
+Route::post('/logout', [AuthController::class, 'logout'])->middleware('auth');
+Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
 use App\Http\Controllers\BelajarController;
 

@@ -13,19 +13,21 @@
     <div class="main">
         <input type="checkbox" id="chk" aria-hidden="true">
         <div class="signup">
-            <form>
+            <form action="{{ url('/register') }}" method="POST">
+                @csrf
                 <label for="chk" aria-hidden="true">Sign Up</label>
-                <input type="text" name="txt" placeholder="Username" required="">
+                <input type="text" name="usn" placeholder="Username" required="">
                 <input type="email" name="email" placeholder="Email" required="">
-                <input type="Password" name="pswd" placeholder="Password" required="">
+                <input type="Password" name="pwd" placeholder="Password" required="">
                 <button>Sign Up</button>
             </form>
         </div>
         <div class="login">
-            <form>
+            <form action="{{ url('/login') }}" method="POST">
+                @csrf
                 <label for="chk" aria-hidden="true">Login</label>
                 <input type="email" name="email" placeholder="Email" required="">
-                <input type="Password" name="pswd" placeholder="Password" required="">
+                <input type="Password" name="password" placeholder="Password" required="">
                 <button>Login</button>
             </form>
         </div>
