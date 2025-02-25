@@ -4,9 +4,10 @@
 <html lang="en">
 
 <head>
-    <title>E-Learning</title>
-    <!-- <link rel="stylesheet" href="{{ asset('css/belajar.css') }}"> -->
+    <title>E-Learning | Belajar</title>
+    <link rel="stylesheet" href="{{ asset('css/belajar.css') }}">
 </head>
+
 <style>
 p {
     text-align: justify;
@@ -26,42 +27,21 @@ p {
             </div>
     </section>
     <section>
-        <div class="d-flex" style="gap: 20px; margin-left: 130px;">
-            <div class="card" style="width: 22rem;">
-                <img class="card-img-top" src="{{ asset('img/html.png') }}" alt="Card image cap"
+        <div class="d-flex flex-wrap justify-content-center" style="gap: 20px; margin-left: auto; margin-right: auto;">
+            @foreach($belajar as $item)
+            <div class="card" style="width: calc(27.3% - 20px); min-width: 250px;">
+                <img class="card-img-top" src="{{ Storage::url($item->gambar) }}" alt="Card image cap"
                     style="aspect-ratio: 4 / 2.7; object-fit: cover;">
-                <div class="card-body">
-                    <h4 class="card-title fw-bold">Belajar HTML</h4>
-                    <p class="card-text">HyperText Markup Language yang biasa disingkat HTML adalah bahasa markah yang
-                        sangat berguna untuk membuat sebuah halaman (kerangka) website. Jika kalian ingin membuat
-                        website, maka kalian wajib belajar bahasa markah ini.
-                    </p>
-                    <a href="{{ asset('./belajar_detail') }}" class="btn btn-outline-primary w-100">Mulai Belajar</a>
+                <div class="card-body d-flex flex-column">
+                    <h4 class="card-title fw-bold">{{ $item->judul }}</h4>
+                    <p class="card-text flex-grow-1">{{ $item->deskripsi }}</p>
+                    <hr style="border: 1px solid #000; width: 100%; margin: 15px auto;">
+                    <a href="{{ route('belajar_detail', $item->id) }}" class="btn btn-outline-primary mt-auto w-100">
+                        Selengkapnya
+                    </a>
                 </div>
             </div>
-            <div class="card" style="width: 22rem;">
-                <img class="card-img-top" src="{{ asset('img/css.png') }}" alt="Card image cap"
-                    style="aspect-ratio: 4 / 2.7; object-fit: cover;">
-                <div class="card-body">
-                    <h4 class="card-title fw-bold">Belajar CSS</h4>
-                    <p class="card-text">Cascading Style Sheets yang biasa disingkat CSS adalah sekumpulan kode yang
-                        digunakan untuk men-design bahasa markup seperti HTML. Cascading Style Sheets (CSS) sangat
-                        berguna sekali untuk mengelola dan meningkatkan UI/UX sebuah website.</p>
-                    <a href="#" class="btn btn-outline-primary w-100">Mulai Belajar</a>
-                </div>
-            </div>
-            <div class="card" style="width: 22rem;">
-                <img class="card-img-top" src="{{ asset('img/php.png') }}" alt="Card image cap"
-                    style="aspect-ratio: 4 / 2.7; object-fit: cover;">
-                <div class="card-body">
-                    <h4 class="card-title fw-bold">Belajar PHP</h4>
-                    <p class="card-text">PHP umumnya digunakan dalam pengembangan website. PHP merupakan bahasa
-                        server-side (Back-END) terpopuler di dunia karena mudah untuk dipelajari, komunitas yang sangat
-                        luas dan PHP tersedia di/untuk semua server. Biasanya digunakan bersamaan dengan HTML dan CSS.
-                    </p>
-                    <a href="#" class="btn btn-outline-primary w-100">Mulai Belajar</a>
-                </div>
-            </div>
+            @endforeach
         </div>
     </section>
     <footer style="padding-top: 50px;">

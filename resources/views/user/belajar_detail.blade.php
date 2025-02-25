@@ -22,9 +22,10 @@
     </section>
     <section>
         <div class="d-flex" style="gap: 20px; margin-left: 130px;">
+            @foreach($belajar as $item)
             <div class="card" style="width: 22rem;">
                 <div class="card-body">
-                    <h5 lass="card-title fw-bold">Berkenalan dengan HTML</h5>
+                    <h5 lass="card-title fw-bold">{{ $item['judul_belajar'] }}</h5>
                 </div>
                 <img class="card-img-top" src="{{ asset('img/pers.png') }}" alt="Card image cap"
                     style="aspect-ratio: 4 / 2.7; object-fit: cover;">
@@ -32,10 +33,13 @@
                     <h4 class="card-title fw-bold">
                         <hr style="border: 1px solid #000; width: 100%; margin: 20px auto;">
                     </h4>
-                    <a href="{{ asset('./belajar_detail') }}" class="btn btn-outline-primary w-100">Mulai
-                        Belajar</a>
+                    <a href="{{ asset('storage/' . $item->file) }}" target="_blank"
+                        class="btn btn-outline-primary w-100">
+                        Mulai Belajar
+                    </a>
                 </div>
             </div>
+            @endforeach
         </div>
     </section>
     <footer style="padding-top: 50px;">

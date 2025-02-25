@@ -36,6 +36,12 @@
                             Belajar
                         </a>
                     </li>
+                    <!-- <li class="sidebar-item">
+                        <a href="{{ asset('./belajar_detail_admin') }}" class="sidebar-link nav-link">
+                            <i class="fas fa-book fe-2"></i>
+                            Belajar Detail
+                        </a>
+                    </li> -->
                     <li class="sidebar-item">
                         <a href="{{ asset('./materi_admin') }}" class="sidebar-link nav-link">
                             <i class="fas fa-scroll fe-2"></i>
@@ -75,18 +81,17 @@
         <div class=" main">
             <nav class="navbar navbar-expand px-3 border-bottom">
                 <div class="container-fluid">
-                    <button class="btn" type="button" data-bs-theme="dark">
-                        <i style="color:white;" class="fas fa-list fe-2"></i>
+                    <button class="btn" type="button" data-bs-theme="light">
+                        <i class="fas fa-list fe-2"></i>
                     </button>
                     <li class="nav-item ">
-                        <i class="far fa-user-circle me-auto" style="color:white; font-size:25px ;"></i>
-                        <span class="mr-2 d-none d-lg-inline text-light small"></span>
+                        <i class="far fa-user-circle me-auto" style="font-size:25px ;"></i>
+                        <span class="mr-2 d-none d-lg-inline small"></span>
                     </li>
                 </div>
             </nav>
             <main class="content px-3 py-3">
                 @yield('content')
-
             </main>
 
         </div>
@@ -98,6 +103,22 @@
             <!-- <h1>saras mutia arofah</h1> -->
         </div>
     </section>
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const sidebar = document.getElementById("sidebar");
+        const toggleButton = document.querySelector(".btn[data-bs-theme='light']");
+
+        toggleButton.addEventListener("click", function() {
+            sidebar.classList.toggle("hidden");
+        });
+    });
+    </script>
+
+    <style>
+    .hidden {
+        display: none;
+    }
+    </style>
 
 </body>
 

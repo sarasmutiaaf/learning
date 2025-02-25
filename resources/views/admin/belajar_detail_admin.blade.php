@@ -4,7 +4,7 @@
 <html lang="en">
 
 <head>
-    <title>E-Learning | Belajar</title>
+    <title>E-Learning | Belajar Detail</title>
     <link rel="stylesheet" href="{{ asset('css/belajar.css') }}">
 </head>
 <style>
@@ -36,30 +36,36 @@ td:hover {
     <div class="container" id="buku">
         <div class=" row">
             <div class="col ">
-                <a href="{{ route('belajar/create') }}" class="btn btn-outline-primary mt-3">Tambah Data Pelajaran</a>
-                <h1 class="mt-2" style="color: #6282a3">Daftar Pelajaran</h1>
+                <a href="{{ route('belajar_detail_admin/create') }}" class="btn btn-outline-primary mt-3">Tambah
+                    Data</a>
+                <h1 class="mt-2" style="color: #6282a3">Daftar Detail Pelajaran</h1>
             </div>
 
             <table class="table text-white">
                 <thead>
                     <tr>
                         <th scope="col">#</th>
-                        <th scope="col">Sampul</th>
                         <th scope="col">Judul</th>
-                        <th scope="col">Deskripsi</th>
+                        <th scope="col">File</th>
                         <th scope="col">Aksi</th>
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach($tbl_belajar as $belajar)
+                    @foreach($tbl_belajar_detail as $index => $belajarDetail)
                     <tr class="">
-                        <th scope="row">{{ $loop->iteration }}</th>
-                        <td><img src="{{ Storage::url($belajar->gambar) }}" alt="" class="cover"></td>
-                        <td>{{ $belajar->judul }}</td>
-                        <td>{{ $belajar->deskripsi }}</td>
+                        <th scope="row">{{ $index + 1 }}</th>
+                        <td>{{ $belajarDetail->judul_belajar }}</td>
+                        <td>@if ($belajarDetail->file)
+                            <a href="{{ asset('storage/' . $belajarDetail->file) }}" target="_blank">Lihat File</a>
+                            @else
+                            Tidak ada file
+                            @endif
+                        </td>
                         <td>
-                            <a href="{{ route('belajar/edit', $belajar->id) }}" class="btn btn-outline-warning">Edit</a>
-                            <form action="{{ route ('belajar/destroy', $belajar->id) }}" method="post" class="d-inline">
+                            <a href="{{ route('belajar_detail_admin/edit', $belajar->id) }}"
+                                class="btn btn-outline-warning">Edit</a>
+                            <form action="{{ route ('belajar_detail_admin/destroy', $belajar->id) }}" method="post"
+                                class="d-inline">
                                 <input type="hidden" name="buku" value="">
                                 <input type="hidden" name="_method" value="DELETE">
                                 @csrf

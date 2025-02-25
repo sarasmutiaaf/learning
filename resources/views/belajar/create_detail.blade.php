@@ -4,7 +4,7 @@
 <html lang="en">
 
 <head>
-    <title>E-Learning | Materi</title>
+    <title>E-Learning | Belajar</title>
     <link rel="stylesheet" href="{{ asset('css/belajar.css') }}">
 </head>
 
@@ -20,8 +20,8 @@
                     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                 </div>
                 @endif
-                <h2 class="my-3">Tambah Data Materi</h2>
-                <form action="/materi/store" method="post" enctype="multipart/form-data">
+                <h2 class="my-3">Tambah Data Pelajaran</h2>
+                <form action="/belajar/store" method="post" enctype="multipart/form-data">
                     @csrf
                     <div class="row mb-3">
                         <label for="judul" class="col-sm-2 col-form-label">Judul</label>
@@ -40,18 +40,14 @@
                         </div>
                     </div>
                     <div class="form-group row my-3">
-                        <label for="gambar" class="col-sm-2 col-form-label">Sampul</label>
-                        <div class="col-sm-2">
-                            <img src="{{ asset('img/laptop2.jpg') }}" class="img-thumbnail img-preview">
-                        </div>
-                        <div class="col-sm-5">
+                        <label for="file" class="col-sm-2 col-form-label">File</label>
+                        <div class="col-sm-7">
                             <div class="input-group">
-                                <label class="input-group-text btn btn-outline-secondary" for="gambar">Pilih
-                                    File</label>
-                                <span class="form-control custom-img-label">Nama File</span>
+                                <label class="input-group-text btn btn-outline-secondary" for="file">Pilih File</label>
+                                <input class="form-control" type="file" id="file" name="file"
+                                    onchange="updateFileName()">
                             </div>
-                            <input class="form-control" type="file" id="gambar" name="gambar" value=""
-                                onchange="previewImg()" hidden>
+                            <span class="form-text text-muted" id="file-name">Tidak ada file yang dipilih</span>
                         </div>
                     </div>
                     <button type="submit" class="btn btn-outline-primary">Tambah Data</button>
@@ -60,20 +56,14 @@
         </div>
     </div>
     <script>
-    function previewImg() {
-        const gambar = document.querySelector('#gambar');
-        const imgPreview = document.querySelector('.img-preview');
-        const gambarLabel = document.querySelector('.custom-img-label');
+    function updateFileName() {
+        const fileInput = document.querySelector('#file');
+        const fileName = document.querySelector('#file-name');
 
-        if (gambar.files.length > 0) {
-            gambarLabel.textContent = gambar.files[0].name;
-
-            const fileReader = new FileReader();
-            fileReader.readAsDataURL(gambar.files[0]);
-
-            fileReader.onload = function(e) {
-                imgPreview.src = e.target.result;
-            };
+        if (fileInput.files.length > 0) {
+            fileName.textContent = fileInput.files[0].name;
+        } else {
+            fileName.textContent = "Tidak ada file yang dipilih";
         }
     }
     </script>

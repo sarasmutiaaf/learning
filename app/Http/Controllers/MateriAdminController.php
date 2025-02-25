@@ -10,8 +10,7 @@ class MateriAdminController extends Controller
 {
     public function index()
     {
-         $tbl_materi = Materi::all();
-         
+        $tbl_materi = Materi::all();
         return view('/admin/materi_admin', compact('tbl_materi')); 
     }
 

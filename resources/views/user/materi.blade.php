@@ -34,7 +34,7 @@ p {
                     style="aspect-ratio: 4 / 2.7; object-fit: cover;">
                 <div class="card-body d-flex flex-column">
                     <h4 class="card-title fw-bold">{{ $item->judul }}</h4>
-                    <p class="card-text flex-grow-1">{{ $item->deskripsi }}</p>
+                    <p class="card-text flex-grow-1">{{ Str::limit($item->deskripsi, 20, '...') }}</p>
                     <hr style="border: 1px solid #000; width: 100%; margin: 15px auto;">
                     <a href="{{ route('materi_detail', $item->id) }}" class="btn btn-outline-primary mt-auto w-100">
                         Selengkapnya
