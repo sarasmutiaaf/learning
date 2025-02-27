@@ -154,7 +154,7 @@
                     {{ Auth::user()->nama }}
                 </a>
                 <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Profil</a></li>
+                    <li><a class="dropdown-item" href="{{ asset('./profile') }}">Profil</a></li>
                     <li>
                         <form action="{{ route('logout') }}" method="POST">
                             @csrf
@@ -164,7 +164,7 @@
                 </ul>
             </div>
             @else
-            <a href="{{ url('/register') }}" class="login-button">Daftar</a>
+            <!-- <a href="{{ url('/register') }}" class="login-button">Daftar</a> -->
             <a href="{{ url('/login') }}" class="login-button ms-2">Masuk</a>
             @endif
             <button class="navbar-toggler pe-0" type="button" data-bs-toggle="offcanvas"

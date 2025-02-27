@@ -21,6 +21,12 @@
             </div>
     </section>
     <section>
+        <div class="d-flex justify-content-center align-items-start">
+            <div class="card-footer bg-white mb-4" style="position: relative; z-index: 10;">
+                <a href="{{ route('belajar') }}" class="btn btn-outline-primary btn-lg w-100">Kembali</a>
+            </div>
+        </div>
+
         <div class="d-flex" style="gap: 20px; margin-left: 130px;">
             @foreach($belajar as $item)
             <div class="card" style="width: 22rem;">
@@ -33,10 +39,16 @@
                     <h4 class="card-title fw-bold">
                         <hr style="border: 1px solid #000; width: 100%; margin: 20px auto;">
                     </h4>
+                    @if(Auth::check())
                     <a href="{{ asset('storage/' . $item->file) }}" target="_blank"
                         class="btn btn-outline-primary w-100">
                         Mulai Belajar
                     </a>
+                    @else
+                    <a href="{{ route('login') }}" class="btn btn-outline-danger w-100">
+                        Login untuk Belajar
+                    </a>
+                    @endif
                 </div>
             </div>
             @endforeach
